@@ -27,11 +27,11 @@ class AboutObjects < Neo::Koan
   def test_every_object_has_different_id
     obj = Object.new
     another_obj = Object.new
-    assert_equal __, obj.object_id != another_obj.object_id
+    assert_equal true, obj.object_id != another_obj.object_id
   end
 
   def test_small_integers_have_fixed_ids
-    assert_equal __, 0.object_id
+    assert_equal 1, 0.object_id
     assert_equal __, 1.object_id
     assert_equal __, 2.object_id
     assert_equal __, 100.object_id
